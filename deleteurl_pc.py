@@ -1,4 +1,5 @@
 from adguardhome import AdGuardHome
+from keys import newpass,newuser
 import asyncio
 
 # variable de nombre y url
@@ -9,7 +10,7 @@ urlLista= "https://raw.githubusercontent.com/manolixgt/agh_blocking_python/main/
 
 async def main():
     
-    async with AdGuardHome("172.16.10.199",password="lesli3,",port=80,username="admin") as adguard:
+    async with AdGuardHome("172.16.10.199",password=newpass,port=80,username=newuser) as adguard:
         bloquear = await adguard.filtering.remove_url(urlLista)
         print("Nueva lista eliminada", bloquear)
 
