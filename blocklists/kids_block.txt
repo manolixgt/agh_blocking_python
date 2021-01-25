@@ -1,0 +1,5 @@
+||youtube.com^$client=172.16.10.111|172.16.10.194
+||netflix.com^$client=172.16.10.111|172.16.10.194
+||roblox.com^$client=172.16.10.111|172.16.10.194
+||juegos.com^$client=172.16.10.111|172.16.10.194
+||juegosdechicas.com^$client=172.16.10.111|172.16.10.194
