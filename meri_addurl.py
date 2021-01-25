@@ -1,15 +1,16 @@
 from adguardhome import AdGuardHome
+from keys import newpass,newuser
 import asyncio
 
 # variable de nombre y url
 
-nuevaLista = "pc block"
-urlLista= "https://raw.githubusercontent.com/manolixgt/agh_blocking_python/main/blocklists/pc_block.txt"
+nuevaLista = "meri block"
+urlLista= "https://raw.githubusercontent.com/manolixgt/agh_blocking_python/main/blocklists/meri_block.txt"
 
 
 async def main():
     
-    async with AdGuardHome("172.16.10.199",password="lesli3,",port=80,username="admin") as adguard:
+    async with AdGuardHome("172.16.10.199",password=newpass,port=80,username=newuser) as adguard:
         bloquear = await adguard.filtering.add_url(nuevaLista,urlLista)
         print("Nueva lista agregada", bloquear)
 
