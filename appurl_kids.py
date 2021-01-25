@@ -1,10 +1,16 @@
 from adguardhome import AdGuardHome
 import asyncio
 
+# variable de nombre y url
+
+nuevaLista = "pc block"
+urlLista= ""
+
+
 async def main():
     
     async with AdGuardHome("172.16.10.199") as adguard:
-        version = await adguard.version()
+        bloquear = await adguard.filtering.add_url(name:nuevaLista, url:urlLista)
         print("AdGuard version:", version)
 
 if __name__ == "__main__":
