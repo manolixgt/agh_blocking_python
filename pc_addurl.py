@@ -5,15 +5,15 @@ import asyncio
 # variable de nombre y url
 
 nuevaLista = "pc block"
-urlLista= "https://raw.githubusercontent.com/manolixgt/agh_blocking_python/main/blocklists/pc_block.txt"
+urlLista = "https://raw.githubusercontent.com/manolixgt/agh_blocking_python/main/blocklists/pc_block.txt"
 
 
 async def main():
     
     async with AdGuardHome("172.16.10.199",password=newpass,port=80,username=newuser) as adguard:
-        # bloquear = await adguard.filtering.add_url(nuevaLista, urlLista)
-        bloquear = await adguard.filtering.enable_url(urlLista)
-        refrescar = await adguard.filtering.refresh()
+        bloquear = await adguard.filtering.add_url(nuevaLista, urlLista)
+        # bloquear = await adguard.filtering.enable_url(url=urlLista)
+        # refrescar = await adguard.filtering.refresh()
         print("Lista PC enable", bloquear)
 
 if __name__ == "__main__":
